@@ -6,20 +6,20 @@ public class OperatoreUnario {
 		//variabile locale: deve sempre essere inizializzata
 		int saldo = 0;
 
-		//incrementa di una unit‡:
+		//incrementa di una unit√®:
 		
 		saldo = saldo + 1;
 		//stampo il valore di saldo
-		System.out.println("il saldo Ë " + saldo);
+		System.out.println("il saldo √® " + saldo);
 
 		saldo += 1;
 		//stampo il valore di saldo
-		System.out.println("il saldo Ë " + (saldo += 1));
+		System.out.println("il saldo √® " + (saldo += 1));
 		
 		//operatore unario di post-incremento
 		System.out.println("--------"+ (saldo++));
 		//stampo il valore di saldo
-		System.out.println("il saldo Ë " + saldo);
+		System.out.println("il saldo √® " + saldo);
 	
 	}
 	
