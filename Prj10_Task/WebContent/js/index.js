@@ -1,0 +1,1 @@
+console.log('funziona anche il js');
