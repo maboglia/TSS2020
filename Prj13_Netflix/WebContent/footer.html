@@ -1,0 +1,31 @@
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="https://getbootstrap.com/docs/4.4/examples/carousel/#">Back to top</a></p>
+    <p>© 2017-2019 Company, Inc. · <a href="https://getbootstrap.com/docs/4.4/examples/carousel/#">Privacy</a> · <a href="https://getbootstrap.com/docs/4.4/examples/carousel/#">Terms</a></p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="./Carousel Template · Bootstrap_files/bootstrap.bundle.min.js.download" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script>
+$('#prova').click(function(){
+
+	$.ajax({
+		  method: "GET",
+		  url: "ordinaPerAnno"
+	})
+	.done(function( msg ) {
+	   //alert( "La servlet ha risposto: " + msg );
+	   //console.dir(msg);
+	   //msg = JSON.parse(msg);
+		$.each(msg, function( index, value ) {
+		   $("#tblFilm").append("<tr><td>" + index + "</td><td>" + value + "</td></tr>");
+		   console.log(index, value);
+		  
+		});
+	})
+
+});
+
+</script>
+</body></html>
