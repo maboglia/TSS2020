@@ -7,28 +7,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Libro;
 import service.LibriService;
-import service.Scaffale;
 import service.Schedario;
 
 /**
- * Servlet implementation class Libri
+ * Servlet implementation class Prestito
  */
-@WebServlet("/Libri")
-public class Libri extends HttpServlet {
+@WebServlet("/prestito")
+public class Prestito extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		Schedario schedario = new Schedario();
-		LibriService.init(schedario);
-		String pagina = "Elenco Libri";
-		request.setAttribute("messaggio", pagina);
-		request.setAttribute("elenco", schedario.getElencoLibri());
-		request.getRequestDispatcher("home.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+		String id = request.getParameter("identificativo");
+		Schedario sc = new Schedario();
+		LibriService.init(sc);
+		
+		Libro l = sc.getLibroById(Integer.parseInt(id));
+		
+		if (l.isInPrestito()) {
+			response.getWriter().append("Libro già in prestito: ").append(l.getTitolo());
+		} else {
+			l.setInPrestito(true);
+			response.getWriter().append("Libro disponibile: ").append(l.getTitolo());
+			
+		}
+		
 	}
 
 	/**

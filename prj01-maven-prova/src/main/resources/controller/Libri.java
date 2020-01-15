@@ -7,14 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import service.LibriService;
-import service.Scaffale;
-import service.Schedario;
-
 /**
  * Servlet implementation class Libri
  */
-@WebServlet("/Libri")
+@WebServlet("/libri")
 public class Libri extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,13 +18,8 @@ public class Libri extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		Schedario schedario = new Schedario();
-		LibriService.init(schedario);
-		String pagina = "Elenco Libri";
-		request.setAttribute("messaggio", pagina);
-		request.setAttribute("elenco", schedario.getElencoLibri());
-		request.getRequestDispatcher("home.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

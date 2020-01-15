@@ -71,5 +71,11 @@ public class Libro implements Comparable<Libro> {
 	public int compareTo(Libro o) {
 		return this.titolo.compareTo(o.titolo);
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.titolo + " " +this.autore + " " + this.genere;
+	}
 	
 }
