@@ -56,11 +56,11 @@
 <% 
 	if (elencoAutori != null) {
 
-		elencoAutori.stream()
+	/* 	elencoAutori.stream()
 			.filter(a -> a.getNome().length() > 5)
 			.forEach( 
 					a -> out.print("<tr><td>"+ a.getNome() +"</td></tr>")
-					);
+					); */
 		
 	}
 %>
