@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-import javafx.scene.transform.Scale;
 
 public class LeggiScriviFile {
 

@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import javafx.scene.transform.Scale;
 
 public class LeggiFile {
 
@@ -26,7 +25,7 @@ public class LeggiFile {
 			System.out.println("404: file not found :)");
 			//e.printStackTrace();
 		} finally {
-			//questa istruzione sarà eseguita in ogni caso
+			//questa istruzione sarï¿½ eseguita in ogni caso
 			System.out.println(somma/counter);
 		}
 	}
